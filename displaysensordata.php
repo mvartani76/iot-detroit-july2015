@@ -4,7 +4,7 @@
 </head>
 <body>
 <h1>Data from the temperature and moisture sensors</h1>
-<form action="add.php" method="get">
+<form action="addsensordata.php" method="get">
 <TABLE>
 <tr>
    <td>Temperature 1</td>
