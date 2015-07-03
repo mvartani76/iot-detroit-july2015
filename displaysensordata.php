@@ -19,7 +19,7 @@
 </FORM>
 <hr>
 <?php
-   include("conec.php");
+   include("db_connection.php");
    $link=Conection();
    $result=mysql_query("select * from tempmoi order by id desc",$link);
 ?>
