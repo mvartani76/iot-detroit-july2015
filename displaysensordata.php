@@ -3,7 +3,7 @@
       <title>Data of Sensor</title>
    </head>
    <body>
-      <h1>Data from the temperature and moisture sensors</h1>
+      <h1>Data from the temperature and photo sensors</h1>
          <form action="addsensordata.php" method="get">
          <table>
             <tr>
@@ -11,11 +11,11 @@
                <td><input type="text" name="temp1" size="20" maxlength="30"></td>
             </tr>
             <tr>
-               <td>Moisture 1</td>
+               <td>Photo Sensor 1</td>
                <td><input type="text" name="photo1" size="20" maxlength="30"></td>
             </tr>
          </table>
-         <input type="submit" name="accion" value="Grabar">
+         <input type="submit" name="action" value="Record">
          </FORM>
          <hr>
       <?php
