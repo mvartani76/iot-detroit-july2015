@@ -15,7 +15,7 @@
                <td><input type="text" name="photo1" size="20" maxlength="30"></td>
             </tr>
          </table>
-         <input type="submit" name="action" value="Record">
+         <input type="submit" name="record_button" value="Record">
          </FORM>
          <hr>
       <?php
