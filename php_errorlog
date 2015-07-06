@@ -1,7 +1,0 @@
-[03-Jul-2015 12:31:36 America/Chicago] PHP Fatal error:  Call to undefined function Conection() in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/displaysensordata.php on line 23
-[03-Jul-2015 12:34:04 America/Chicago] PHP Fatal error:  Call to undefined function Conection() in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/displaysensordata.php on line 23
-[03-Jul-2015 12:34:05 America/Chicago] PHP Fatal error:  Call to undefined function Conection() in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/displaysensordata.php on line 23
-[03-Jul-2015 12:34:40 America/Chicago] PHP Fatal error:  Call to undefined function Conection() in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/displaysensordata.php on line 23
-[03-Jul-2015 12:35:51 America/Chicago] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/db_connection.php on line 3
-[05-Jul-2015 19:35:15 America/Chicago] PHP Fatal error:  Call to undefined function mysqli_select__error() in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/db_connection.php on line 10
-[05-Jul-2015 19:35:25 America/Chicago] PHP Fatal error:  Call to undefined function mysqli_select_error() in /home/iotdetro/public_html/arduino-test1/arduino-iot-test-july2015/db_connection.php on line 10
