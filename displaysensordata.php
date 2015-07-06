@@ -4,19 +4,19 @@
    </head>
    <body>
       <h1>Data from the temperature and photo sensors</h1>
-         <form action="addsensordata.php" method="get">
-         <table>
-            <tr>
-               <td>Temperature 1</td>
-               <td><input type="text" name="temp1" size="20" maxlength="30"></td>
-            </tr>
-            <tr>
-               <td>Photo Sensor 1</td>
-               <td><input type="text" name="photo1" size="20" maxlength="30"></td>
-            </tr>
-         </table>
-         <input type="submit" name="record_button" value="Record">
-         </FORM>
+         <form method="get" action="addsensordata.php">
+            <table>
+               <tr>
+                  <td>Temperature 1</td>
+                  <td><input type="text" name="temp1" size="20" maxlength="30"></td>
+               </tr>
+               <tr>
+                  <td>Photo Sensor 1</td>
+                  <td><input type="text" name="photo1" size="20" maxlength="30"></td>
+               </tr>
+            </table>
+            <input type="submit" name="record_button" value="Record">
+         </form>
          <hr>
       <?php
          include("db_connection.php");
