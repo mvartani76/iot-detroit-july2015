@@ -21,7 +21,7 @@
       <?php
          include("db_connection.php");
          $link=Connection();
-         $result=mysql_query("select * from sensordata order by id desc",$link);
+         $result=mysqli_query($link,"select * from sensordata order by id desc");
       ?>
       <table border="1" cellspacing="1" cellpadding="1">
          <tr>
@@ -30,9 +30,9 @@
           </tr>
          <?php     
             while($row = mysql_fetch_array($result)) {
-               printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td></tr>", $row["temp1"], $row["moi1"]);
+               printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td></tr>", $row["temp1"], $row["photo1"]);
             }
-            mysql_free_result($result);
+            mysqli_free_result($result);
          ?>
       </table>
    </body>
