@@ -29,7 +29,7 @@
             <td>&nbsp;Photo Sensor 1&nbsp;</td>
           </tr>
          <?php     
-            while($row = mysql_fetch_array($result)) {
+            while($row = mysqli_fetch_array($result)) {
                printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td></tr>", $row["temp1"], $row["photo1"]);
             }
             mysqli_free_result($result);
