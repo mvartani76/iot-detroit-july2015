@@ -72,12 +72,22 @@ void loop()
   
   float currentTemp;
   currentTemp = sensors.getTempCByIndex(0);
-  Serial.print("Temp = ");
-  Serial.print("\t");
-  Serial.println(currentTemp,2);
+  //Serial.print("Temp = ");
+  //Serial.print("\t");
+  //Serial.println(currentTemp,2);
 
-  if (client.connect(server,80)) {
+  // if there are incoming bytes available 
+  // from the server, read them and print them:
+  while (client.available()&& status == WL_CONNECTED) {
+    char c = client.read();
+    Serial.write(c);
+  }
+  client.flush();
+  client.stop();
+
+  if (client.connect(server,80) == 1) {
     Serial.println("Connect");
+    //client.print( "GET /addsensordata.php?");
     client.print( "GET /arduino-test1/arduino-iot-test-july2015/addsensordata.php?");
     client.print("temp1=");
     client.print( currentTemp );
@@ -85,22 +95,25 @@ void loop()
     client.print("photo1=");
     client.print( currentTemp );
     client.print( " HTTP/1.1\r\n");
-    client.print( "Host: www.iot-detroit.org\r\n" );
-    client.print( "Content-Type: application/x-www-form-urlencoded\r\n" );
-    client.print( "Connection: close\r\n\r\n" );
+    client.print( "Host: www.iot-detroit.org\r\n\r\n" );
+    //client.print( "Content-Type: application/x-www-form-urlencoded\r\n" );
+    //client.print( "Connection: close\r\n\r\n" );
+    
+    Serial.print( "GET /arduino-test1/arduino-iot-test-july2015/addsensordata.php?");
+    Serial.print("temp1=");
+    Serial.print( currentTemp );
+    Serial.print("&");
+    Serial.print("photo1=");
+    Serial.print( currentTemp );
+    Serial.print( " HTTP/1.1\r\n");
+    Serial.print( "Host: www.iot-detroit.org\r\n" );
+    Serial.print( "Content-Type: application/x-www-form-urlencoded\r\n" );
+    Serial.print( "Connection: close\r\n\r\n" );
 
-    client.stop();
+    //client.stop();
   }
   else {
     Serial.println("Disconnected");
-    client.stop();
-  }
-
-  // if there are incoming bytes available 
-  // from the server, read them and print them:
-  while (client.available()) {
-    char c = client.read();
-    Serial.write(c);
   }
   
   delay(10000);
