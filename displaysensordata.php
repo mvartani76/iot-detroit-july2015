@@ -4,6 +4,7 @@
    </head>
    <body>
       <h1>Data from the temperature and photo sensors</h1>
+<!--
          <form method="get" action="addsensordata.php">
             <table>
                <tr>
@@ -16,7 +17,7 @@
                </tr>
             </table>
             <input type="submit" name="record_button" value="Record">
-         </form>
+         </form> -->
          <hr>
       <?php
          include("db_connection.php");
