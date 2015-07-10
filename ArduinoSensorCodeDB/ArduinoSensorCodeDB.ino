@@ -18,15 +18,24 @@ int status = WL_IDLE_STATUS;
 OneWire oneWire(2);
 DallasTemperature sensors(&oneWire);
 
+const int analogInPin = A2;  // Analog input pin that sensors is attached to (DEFAULT=A2)  
+int readingDelay = 10;  // Delay between each reading (DEFAULT=10)  
+int readingsPerSample = 10;  // Number of reaings per sample / loop (DEFAULT=10)  
+boolean singleRead = false;  // Series of readings (False) or single reading (TRUE) (DEFAULT=FALSE)  
 
-//IPAddress server(37,60,225,35);
+//vars  
+int sensorValue = 0; // value read from the pot  
+int outputValue = 0;  
+int ledValue = 0;  
+int sval;  
+int sensorAvg;  
+int tenTot; 
+
 char server[] = "www.iot-detroit.org";
 IPAddress local_ip;
 
 // Initialize the client library
 WiFiClient client;
-
-int looped = 1;
 
 void setup() {
 
@@ -58,7 +67,7 @@ void setup() {
   Serial.println("\nStarting connection to server...");
   // if you get a connection, report back via serial:
   if (client.connect(server, 80)) {
-    Serial.println("connected to server");
+
     // Make an HTTP request:
     client.print("GET HTTP/1.1\r\n");
     client.print("Host: www.iot-detroit.org\r\n");
@@ -72,9 +81,23 @@ void loop()
   
   float currentTemp;
   currentTemp = sensors.getTempCByIndex(0);
-  //Serial.print("Temp = ");
-  //Serial.print("\t");
-  //Serial.println(currentTemp,2);
+
+
+ if(!singleRead){  
+   //SAMPLE OF 10 READINGS   
+   for (int i=0; i<readingsPerSample; i++){  //repeat number of times defined in setup  
+     sval = analogRead(analogInPin);  //take single reading  
+     tenTot = tenTot + sval;  //add up readings  
+     delay(readingDelay);  //delay between readings as defined in setup. should be non 0  
+   }  
+   sensorAvg = (tenTot / 10);  //divide the total  
+   tenTot = 0; //reset total variable  
+   outputValue = sensorAvg;  //define smoothed, averaged reading  
+ }else{   
+   //STRAIGHT READINGS //only do this if singleRead=true   
+   sensorValue = analogRead(analogInPin);  
+   outputValue = sensorValue;  
+ }  
 
   // if there are incoming bytes available 
   // from the server, read them and print them:
@@ -86,31 +109,27 @@ void loop()
   client.stop();
 
   if (client.connect(server,80) == 1) {
-    Serial.println("Connect");
-    //client.print( "GET /addsensordata.php?");
+
+    // HTTP requests are very picky on the format so pay attention
+    // to everyghing including spaces!!
     client.print( "GET /arduino-test1/arduino-iot-test-july2015/addsensordata.php?");
     client.print("temp1=");
     client.print( currentTemp );
     client.print("&");
     client.print("photo1=");
-    client.print( currentTemp );
+    client.print( outputValue );
     client.print( " HTTP/1.1\r\n");
     client.print( "Host: www.iot-detroit.org\r\n\r\n" );
-    //client.print( "Content-Type: application/x-www-form-urlencoded\r\n" );
-    //client.print( "Connection: close\r\n\r\n" );
     
     Serial.print( "GET /arduino-test1/arduino-iot-test-july2015/addsensordata.php?");
     Serial.print("temp1=");
     Serial.print( currentTemp );
     Serial.print("&");
     Serial.print("photo1=");
-    Serial.print( currentTemp );
+    Serial.print( outputValue );
     Serial.print( " HTTP/1.1\r\n");
     Serial.print( "Host: www.iot-detroit.org\r\n" );
-    Serial.print( "Content-Type: application/x-www-form-urlencoded\r\n" );
-    Serial.print( "Connection: close\r\n\r\n" );
 
-    //client.stop();
   }
   else {
     Serial.println("Disconnected");
