@@ -1,3 +1,5 @@
+#include <SPI.h>
+
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <WiFiServer.h>
@@ -17,7 +19,9 @@ OneWire oneWire(2);
 DallasTemperature sensors(&oneWire);
 
 
-IPAddress server(37,60,225,35);
+//IPAddress server(37,60,225,35);
+char server[] = "www.iot-detroit.org";
+IPAddress local_ip;
 
 // Initialize the client library
 WiFiClient client;
@@ -29,7 +33,7 @@ void setup() {
   sensors.begin();
   
   //Initialize serial and wait for port to open:
-  Serial.begin(57600); 
+  Serial.begin(9600); 
   
   // check for the presence of the shield:
   if (WiFi.status() == WL_NO_SHIELD) {
@@ -56,10 +60,10 @@ void setup() {
   if (client.connect(server, 80)) {
     Serial.println("connected to server");
     // Make an HTTP request:
-    client.println("GET HTTP/1.1");
-    client.println("Host: 37.60.225.35");
-    client.println("Connection: close");
-    client.println();
+    client.print("GET HTTP/1.1\r\n");
+    client.print("Host: www.iot-detroit.org\r\n");
+    client.print("Connection: close\r\n\r\n");
+    client.stop();
   }
 }
 void loop()
@@ -72,23 +76,34 @@ void loop()
   Serial.print("\t");
   Serial.println(currentTemp,2);
 
-  if (client.connected()) {
-    client.print( "GET /addsensordata.php?");
+  if (client.connect(server,80)) {
+    Serial.println("Connect");
+    client.print( "GET /arduino-test1/arduino-iot-test-july2015/addsensordata.php?");
     client.print("temp1=");
-    client.print( CurrentTemp );
-    client.print("&&");
+    client.print( currentTemp );
+    client.print("&");
     client.print("photo1=");
-    client.print( CurrentTemp );
-    client.println( " HTTP/1.1");
-    client.println( "Host: 37.60.225.35" );
-    client.println( "Content-Type: application/x-www-form-urlencoded" );
-    client.println( "Connection: close" );
-    client.println();
-    client.println();
+    client.print( currentTemp );
+    client.print( " HTTP/1.1\r\n");
+    client.print( "Host: www.iot-detroit.org\r\n" );
+    client.print( "Content-Type: application/x-www-form-urlencoded\r\n" );
+    client.print( "Connection: close\r\n\r\n" );
+
     client.stop();
   }
+  else {
+    Serial.println("Disconnected");
+    client.stop();
+  }
+
+  // if there are incoming bytes available 
+  // from the server, read them and print them:
+  while (client.available()) {
+    char c = client.read();
+    Serial.write(c);
+  }
   
-  delay(1000);
+  delay(10000);
 }
 
 void printWifiStatus() {
@@ -107,4 +122,3 @@ void printWifiStatus() {
   Serial.print(rssi);
   Serial.println(" dBm");
 }
-
