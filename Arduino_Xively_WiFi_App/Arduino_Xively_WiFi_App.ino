@@ -59,7 +59,7 @@ int tenTot;
 WiFiClient client;
  
 // Your Xively key to let you upload data
-char xivelyKey[] = "YOUR-XIVELY-API";
+char xivelyKey[] = "YOUR-XIVELY-KEY";
 //your xively feed ID -- FILL IN YOUR XIVELY FEED NUMBER BELOW
 #define xivelyFeed 1234567890
 //datastreams
