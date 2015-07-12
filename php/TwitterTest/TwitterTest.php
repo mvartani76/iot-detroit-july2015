@@ -5,10 +5,10 @@ require "twitteroauth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 // Set keys
-$consumerKey = 'Fbk35xT0WLc6xnZ7sfBaW5LOw';
-$consumerSecret = 'EqK34wLITUzdI8C4Xz0FHPUXKdZl71wdhU2dDjFvKsxutO7dXU';
-$accessToken = '3276318697-7pZiNWfVXSN2G1BHQB4bJIGhScjsNto8SCohouY';
-$accessTokenSecret = 'QLJpsHwfnjQnDzAtGbWQegj2jDeP9baoqHWnil9lWvHjo';
+$consumerKey = 'YOUR-CONSUMER-KEY';
+$consumerSecret = 'YOUR-CONSUMER-SECRET';
+$accessToken = 'YOUR-ACCESS-TOKEN';
+$accessTokenSecret = 'YOUR-ACCESS-TOKEN-SECRET';
 
 date_default_timezone_set('America/Detroit');
 $date = date('m/d/Y h:i:s a', time());
