@@ -121,7 +121,7 @@ void loop()
     client.print( " HTTP/1.1\r\n");
     client.print( "Host: www.iot-detroit.org\r\n\r\n" );
     
-    Serial.print( "GET /arduino-test1/arduino-iot-test-july2015/OAuth.php?");
+    Serial.print( "GET /arduino-test1/arduino-iot-test-july2015/php/TwitterTest/TwitterTest.php?");
     Serial.print("temp1=");
     Serial.print( currentTemp );
     Serial.print("&");
