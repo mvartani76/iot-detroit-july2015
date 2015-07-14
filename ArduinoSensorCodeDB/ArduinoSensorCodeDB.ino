@@ -130,9 +130,9 @@ void loop()
     Serial.print("&");
     Serial.print("photo1=");
     Serial.print( outputValue );
-    client.print("&");
-    client.print("DeviceType =");
-    client.print(" Arduino UNO" );
+    Serial.print("&");
+    Serial.print("DeviceType =");
+    Serial.print(" Arduino UNO" );
     Serial.print( " HTTP/1.1\r\n");
     Serial.print( "Host: www.iot-detroit.org\r\n" );
 
