@@ -28,10 +28,11 @@
          <tr>
             <td>&nbsp;Temperature 1&nbsp;</td>
             <td>&nbsp;Photo Sensor 1&nbsp;</td>
+            <td>&nbsp;Device Type&nbsp;</td>
           </tr>
          <?php     
             while($row = mysqli_fetch_array($result)) {
-               printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td></tr>", $row["temp1"], $row["photo1"]);
+               printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp;</td></tr>", $row["temp1"], $row["photo1"], $row["DeviceType"]);
             }
             mysqli_free_result($result);
          ?>
