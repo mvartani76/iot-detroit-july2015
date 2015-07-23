@@ -112,27 +112,27 @@ void loop()
 
     // HTTP requests are very picky on the format so pay attention
     // to everyghing including spaces!!
-    client.print( "GET /arduino-test1/arduino-iot-test-july2015/php/SensorRead_MySQL/addsensordata.php?");
+    client.print( "GET /iot-detroit-july2015/php/SensorRead_MySQL/addsensordata.php?");
     client.print("temp1=");
     client.print( currentTemp );
     client.print("&");
     client.print("photo1=");
     client.print( outputValue );
     client.print("&");
-    client.print("DeviceType =");
-    client.print(" Arduino UNO" );    
+    client.print("DeviceType=");
+    client.print("ArduinoUNOWiFi" );    
     client.print( " HTTP/1.1\r\n");
     client.print( "Host: www.iot-detroit.org\r\n\r\n" );
     
-    Serial.print( "GET /arduino-test1/arduino-iot-test-july2015/php/SensorRead_MySQL/addsensordata.php?");
+    Serial.print( "GET /iot-detroit-july2015/php/SensorRead_MySQL/addsensordata.php?");
     Serial.print("temp1=");
     Serial.print( currentTemp );
     Serial.print("&");
     Serial.print("photo1=");
     Serial.print( outputValue );
     Serial.print("&");
-    Serial.print("DeviceType =");
-    Serial.print(" Arduino UNO" );
+    Serial.print("DeviceType=");
+    Serial.print(" ArduinoUNOWiFi" );
     Serial.print( " HTTP/1.1\r\n");
     Serial.print( "Host: www.iot-detroit.org\r\n" );
 
