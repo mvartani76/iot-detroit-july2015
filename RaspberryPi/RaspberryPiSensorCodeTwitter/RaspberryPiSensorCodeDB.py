@@ -12,7 +12,7 @@ device_file = device_folder + '/w1_slave'
 DEBUG=1
 GPIO.setmode(GPIO.BCM)
 
-preurl = "http://www.iot-detroit.org/iot-detroit-july2015/php/SensorRead_MySQL/addsensordata.php"
+preurl = "http://www.iot-detroit.org/iot-detroit-july2015/php/TwitterTest/TwitterTest.php"
 
 def read_temp_raw():
 	f = open(device_file, 'r')
