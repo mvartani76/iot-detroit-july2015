@@ -17,7 +17,7 @@ $date = date('m/d/Y h:i:s a', time());
 $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
 // Set status message
-$tweetMessage = 'Temp1 = '.$_GET["temp1"].' Photo1 = '.$_GET["photo1"].' @ '. $date;
+$tweetMessage = 'Temp1 = '.$_GET["temp1"].' Photo1 = '.$_GET["photo1"].' DeviceType = '.$_GET["DeviceType"].' @ '. $date;
 
 // Check for 140 characters
 if(strlen($tweetMessage) <= 140)
