@@ -118,6 +118,9 @@ void loop()
     client.print("&");
     client.print("photo1=");
     client.print( outputValue );
+    client.print("&");
+    client.print("DeviceType=");
+    client.print("ArduinoUNOWiFi" );
     client.print( " HTTP/1.1\r\n");
     client.print( "Host: www.iot-detroit.org\r\n\r\n" );
     
@@ -127,6 +130,9 @@ void loop()
     Serial.print("&");
     Serial.print("photo1=");
     Serial.print( outputValue );
+    Serial.print("&");
+    Serial.print("DeviceType=");
+    Serial.print("ArduinoUNOWiFi" );
     Serial.print( " HTTP/1.1\r\n");
     Serial.print( "Host: www.iot-detroit.org\r\n" );
 
