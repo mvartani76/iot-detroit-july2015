@@ -15,3 +15,7 @@ The TwitterOAuth libraries are taken from the following location:
 https://github.com/abraham/twitteroauth with further documentation located here: https://twitteroauth.com/
 
 **Arduino_Xively_Ethnt/WiFi_App** - These two Arduino sketches send the sensor reading data to the Xively Platform.
+
+# Tools / Software Used
+
+For these examples, I was using Arduino IDE 1.6.5 from https://www.arduino.cc/en/main/software running on a Windows 7 64 bit Dell Inspiron
