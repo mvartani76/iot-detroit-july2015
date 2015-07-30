@@ -16,6 +16,12 @@ https://github.com/abraham/twitteroauth with further documentation located here:
 
 **Arduino_Xively_Ethnt/WiFi_App** - These two Arduino sketches send the sensor reading data to the Xively Platform.
 
+# Arduino UNO R3 Hardware Setup
+
+![alt text](Arduino-Images/ArduinoUNOR3-lighttempsensor-bb.png "Fritzing drawing of the Arduino UNO R3 connected to breadboard with light and temperature sensors")
+![alt text](Arduino-Images/ArduinoUNOR3-lighttempsensor-photo.png "Photo of the Arduino UNO R3 connected to breadboard with light and temperature sensors")
+
+
 # Tools / Software Used
 
 For these examples, I was using an Arduino UNO R3 with ether a WiFi Shield or Ethernet shield with Arduino IDE 1.6.5 from https://www.arduino.cc/en/main/software running on a Windows 7 64 bit Dell Inspiron
