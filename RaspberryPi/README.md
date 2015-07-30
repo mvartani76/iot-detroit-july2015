@@ -14,7 +14,7 @@ https://github.com/abraham/twitteroauth with further documentation located here:
 
 # Raspberry Pi Hardware Setup
 
-![alt text](RaspberryPi-Images/RaspberryPi-lighttempsonsor-bb.png "Fritzing drawing of the Raspberry Pi connected to breadboard with light and temperature sensors")
+![alt text](RaspberryPi-Images/RaspberryPi-lighttempsensor-bb.png "Fritzing drawing of the Raspberry Pi connected to breadboard with light and temperature sensors")
 ![alt text](RaspberryPi-Images/RaspberryPi-lighttempsensor-photo.png "Photo of the Raspberry Pi connected to breadboard with light and temperature sensors")
 
 
