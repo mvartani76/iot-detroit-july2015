@@ -12,6 +12,11 @@ Raspberry Pi only has digital input pins so we can connect the analog photoresis
 The TwitterOAuth libraries are taken from the following location:
 https://github.com/abraham/twitteroauth with further documentation located here: https://twitteroauth.com/
 
+# Raspberry Pi Hardware Setup
+
+![alt text](RaspberryPi-Images/RaspberryPi-lighttempsonsor-bb.png "Fritzing drawing of the Raspberry Pi connected to breadboard with light and temperature sensors")
+![alt text](RaspberryPi-Images/RaspberryPi-lighttempsensor-photo.png "Photo of the Raspberry Pi connected to breadboard with light and temperature sensors")
+
 
 # Tools / Software Used
 
