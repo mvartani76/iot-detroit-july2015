@@ -1,11 +1,10 @@
-# arduino-iot-test-july2015
-Sample server and client code for demonstrating simple data logging from sensors
+# IoT-Detroit-July2015 Workshop Source Code
+Collection of code for IoT-Detroit Meetup Workshop July 2015
 
-Place Arduino OneWire and dtc Library Folders in <your-path-to-Arduino-Directory>\libraries directory
+This repository has three sub-directories: Arduino, RaspberryPi, and php.
 
-# Arduino Twitter Code
+**Arduino** - This subdirectory contains several samples of code written for the Arduino UNO. The code reads values from external sensors and sends them to either a user created MySQL database, sends them to Xively, a cloud based IoT platform, or tweets them to a user created twitter account. There are separate Arduino sketches for each including variants for ethernet and wifi connectivity.
 
-The Arduino Twitter code is a collection of an Arduino sketch, ArduinoSensorCode_Twitter\ArduinoSensorCode_Twitter.ino, and php code/libraries /php/TwitterTest/. The Arduino code is very similar to the code used to read the sensor values off the Arduino and send to the personal cloud via php (php/SensorRead_MySQL & php/SensorRead_MySQL) but now we send the HTTP GET request to a different php file.
+**RaspberryPi** - This subdirectory contains several samples of python code written for the Raspberry Pi. Similar to the collection of Arduino code, this code reads values from external sensors and sends them to either a user created MySQL database or tweets them to a user created twitter account. There are no distinctions between ethernet and WiFi variants as the connectivity control is in a different file and not in the source code as it is for the Arduino UNO.
 
-The TwitterOAuth libraries are taken from the following location:
-https://github.com/abraham/twitteroauth with further documentation located here: https://twitteroauth.com/
+**php** - This subdirectory contains the code (written in php obviously) that actually connects to the MySQL database and/or Twitter API to post the data read from the sensors.
