@@ -130,10 +130,10 @@ void loop() {
  } 
   
 ///////////////////////////////////////////////////////
-  //put photo sensor value into xively datastreams
-  datastreams[0].setFloat(outputValue);
-  datastreams[1].setFloat(currentTemp);
-  
+  //put temp and photo sensor values into xively datastreams
+  datastreams[0].setFloat(currentTemp);
+  datastreams[1].setFloat(outputValue);
+
   //print the sensor valye
   Serial.print("Read sensor value ");
   Serial.println(datastreams[0].getFloat());
