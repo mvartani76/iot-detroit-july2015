@@ -14,7 +14,9 @@ Place Arduino OneWire and dtc Library Folders in <your-path-to-Arduino-Directory
 The TwitterOAuth libraries are taken from the following location:
 https://github.com/abraham/twitteroauth with further documentation located here: https://twitteroauth.com/
 
-**Arduino_Xively_Ethnt/WiFi_App** - These two Arduino sketches send the sensor reading data to the Xively Platform.
+**Xively** - This directory contains two Arduino sketches send the sensor reading data to the Xively Platform.
+
+**Dragino** - This directory contains slightly modified code to use the Dragino Yun Shield.
 
 # Arduino UNO R3 Hardware Setup
 
