@@ -19,7 +19,7 @@ The difference with this code is that it uses the Dragino Yun Shield...
 	<li>Set Up Yun Shield to access Internet - After joining the network, the settings homepage will ask for password (the default password is dragino). After login,the GUI will show the WIFI / ETH interface status.</li>
 	<li>Click the Configure button and now user can configure Yun Shield to access internet via your WiFi router.</li>
 	<li> Add Dragino Yun Shield Board Configurations - grab the boards.txt file from https://github.com/dragino/modules/blob/master/hardware/YunShield/sketchbook/hardware/YunShield/avr/boards.txt and insert the code below into the <yourpathtoArduino>/Arduino/hardware/arduino/avr/boards.txt file.
-		<blockquote><code>unoyun.name=Arduino Uno -- Dragino Yún
+		<blockquote>unoyun.name=Arduino Uno -- Dragino Yún
  unoyun.upload.via_ssh=true
 
  unoyun.vid.0=0x2341
@@ -47,6 +47,6 @@ The difference with this code is that it uses the Dragino Yun Shield...
  unoyun.build.f_cpu=16000000L
  unoyun.build.board=AVR_YUN
  unoyun.build.core=arduino
- unoyun.build.variant=standard</code></blockquote></li>.
+ unoyun.build.variant=standard</blockquote></li>.
 	<li>Detect Yun Shield -- Assume your laptop and Yun Shield are in the same network. The Yun Shield will broadcast data in this network and Arduino IDE will receive this data and show the Yun Shield in Tools>Port.</li>
 </ol>
