@@ -9,8 +9,6 @@
 
 #include <SPI.h>
 
-#include <Bridge.h>
-
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
@@ -116,10 +114,9 @@ void loop()
     Console.print( outputValue );
     Console.print("&");
     Console.print("DeviceType=");
-    Console.print(" ArduinoUNOWiFi" );
+    Console.print("DraginoUNOWiFi" );
     Console.print( " HTTP/1.1\r\n");
     Console.print( "Host: www.iot-detroit.org\r\n" );
-
   }
   else {
     Console.println("Disconnected");
