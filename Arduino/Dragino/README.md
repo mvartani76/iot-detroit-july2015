@@ -49,4 +49,6 @@ The difference with this code is that it uses the Dragino Yun Shield...
  unoyun.build.core=arduino</br>
  unoyun.build.variant=standard</blockquote></li>.
 	<li>Detect Yun Shield -- Assume your laptop and Yun Shield are in the same network. The Yun Shield will broadcast data in this network and Arduino IDE will receive this data and show the Yun Shield in Tools>Port.</li>
+	<li>Add/replace libraries -- Compared to the WiFi/Ethernet equivalent code, we need to make a few changes to the code to get it to work with the Dragino YUN SHIELD. First we need to replace the WiFi/Ethernet library includes with the Yun Client and Yun Server libraries. Second, replace the WiFi/Ethernet client declaration with a YunClient declaration. And third, replace the serial calls with console calls.
+	<img src="../Arduino-Images/dragino-change-clients.png" alt="Change client declaration to YunClient"></li>
 </ol>
