@@ -53,5 +53,5 @@ The difference with this code is that it uses the Dragino Yun Shield...
 <img src="../Arduino-Images/dragino-libraries.png" alt="Included libraries..."></li>
 Third, replace the WiFi/Ethernet client declaration with a YunClient declaration.
 <img src="../Arduino-Images/dragino-change-clients.png" alt="Change client declaration to YunClient"> And fourth, replace the serial calls with console calls.
-	<img src="../Arduino-Images/dragino-change-clients.png" alt="Change client declaration to YunClient"></li>
+	<img src="../Arduino-Images/dragino-console-change.png" alt="Change serial calls to console calls"></li>
 </ol>
