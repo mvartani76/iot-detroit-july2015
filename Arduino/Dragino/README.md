@@ -9,7 +9,7 @@ The difference with this code is that it uses the Dragino Yun Shield...
 </p>
 
 
-## How do I configure the Dragino Yun Shield and the Arduino UNO Code to work with the Yun Shield?
+## How do I configure the Dragino Yun Shield and the Arduino UNO Code to work together?
 <ol>
 	<li>Jumper pins 1/2 (closest to the reset button) of the ICSP header on the Arduino UNO board
 		<img src="../Arduino-Images/arduinoUNOR3-header.png" alt="Arduino UNO R3 showing ICSP header"></li>
