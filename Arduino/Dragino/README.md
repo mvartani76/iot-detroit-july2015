@@ -36,7 +36,15 @@ The difference with this code is that it uses the Dragino Yun Shield...
 	</table>
 	</div>
 	</li>
-	<li>Click the Configure button and now user can configure Yun Shield to access internet via your WiFi router.</li>
+	<li>Click the SYSTEM button and now user can configure Yun Shield to access internet via your WiFi router.
+	<div style="display: inline-block">
+	<table>
+	<tr>
+	<td><img src="../Arduino-Images/dragino-yun-shield-config.png" alt="Dragino Yun Shield Configuration"></td>
+	</tr>
+	</table>
+	</div>
+	</li>
 	<li> Add Dragino Yun Shield Board Configurations - grab the boards.txt file from https://github.com/dragino/modules/blob/master/hardware/YunShield/sketchbook/hardware/YunShield/avr/boards.txt and insert the code below into the <yourpathtoArduino>/Arduino/hardware/arduino/avr/boards.txt file.
 <pre> unoyun.name=Arduino Uno -- Dragino Yún
  unoyun.upload.via_ssh=true
