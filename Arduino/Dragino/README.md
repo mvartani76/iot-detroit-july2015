@@ -26,7 +26,10 @@ The difference with this code is that it uses the Dragino Yun Shield...
 	</table>
 	</div>
 	</li>
-	<li>Set Up Yun Shield to access Internet - After joining the network, the settings homepage will ask for password (the default password is dragino). After login,the GUI will show the WIFI / ETH interface status.</li>
+	<li>Set Up Yun Shield to access Internet - After joining the network, the settings homepage will ask for password (the default password is dragino). After login,the GUI will show the WIFI / ETH interface status.
+	<img src="../Arduino-Images/dragino-yun-shield-login.png" alt="Dragino Yun Shield Login"></td>
+	<td><img src="../Arduino-Images/dragino-yun-shield-status.png" alt="Dragino Yun Shield Status">
+	</li>
 	<li>Click the Configure button and now user can configure Yun Shield to access internet via your WiFi router.</li>
 	<li> Add Dragino Yun Shield Board Configurations - grab the boards.txt file from https://github.com/dragino/modules/blob/master/hardware/YunShield/sketchbook/hardware/YunShield/avr/boards.txt and insert the code below into the <yourpathtoArduino>/Arduino/hardware/arduino/avr/boards.txt file.
 <pre> unoyun.name=Arduino Uno -- Dragino Yún
