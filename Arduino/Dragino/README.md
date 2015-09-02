@@ -16,9 +16,11 @@ The difference with this code is that it uses the Dragino Yun Shield...
 	<li>Connect the Dragino Yun Shield to the Arduino UNO</li>
 	<li>Power the boards using a DC power supply ~+7v-+15v</li>
 	<li>Connect to Yun Shield -- At the first boot of Yun Shield, it will auto generate an unsecure WiFi network call Draginox-xxxxxx. Use your laptop to connect to this WiFi network. The laptop will get an IP 192.168.240.xxx and the Yun Shield has the default IP 192.168.240.1</br>
+	<div>
 	<img src="../Arduino-Images/dragino-yun-shield-wifi-scan.png" alt="WiFi scan showing Dragino Yun Shield">
 	<img src="../Arduino-Images/dragino-yun-shield-wifi-connecting.png" alt="WiFi connecting to Dragino Yun Shield">
 	<img src="../Arduino-Images/dragino-yun-shield-wifi-connected.png" alt="WiFi connected to Dragino Yun Shield">
+	</div>
 	</li>
 	<li>Set Up Yun Shield to access Internet - After joining the network, the settings homepage will ask for password (the default password is dragino). After login,the GUI will show the WIFI / ETH interface status.</li>
 	<li>Click the Configure button and now user can configure Yun Shield to access internet via your WiFi router.</li>
