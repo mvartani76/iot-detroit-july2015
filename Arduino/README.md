@@ -25,4 +25,4 @@ https://github.com/abraham/twitteroauth with further documentation located here:
 
 # Tools / Software Used
 
-For these examples, I was using an Arduino UNO R3 with either a WiFi Shield or Ethernet shield with Arduino IDE 1.6.7 from https://www.arduino.cc/en/main/software running on a Windows 10 64 bit Dell Inspiron 13 7000 Series
+For these examples, I was using an Arduino UNO R3 with either a WiFi Shield or Ethernet shield with Arduino IDE 1.6.5 from https://www.arduino.cc/en/main/software running on a Windows 7 64 bit Dell Inspiron.
